@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#login_form {
+  padding: 50px;
+}
+#login_form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.login {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px gray;
+  width: 60%;
+  margin: 0 auto;
+}
+.mr-bottom {
+  margin-bottom: 10px;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgb(253 161 13 / 25%);
+}
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 0%);
+}
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 0%);
+}
+/* transaction area */
+#transaction_area {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: none;
+}
+.money_box {
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+}
+.depositeBg {
+  background-color: slateblue;
+}
+.withdrawBg {
+  background-color: salmon;
+}
+.balacneBg {
+  background-color: orange;
+}
+
+.money_input_box {
+  margin-top: 50px;
+  padding: 45px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px gray;
+}
