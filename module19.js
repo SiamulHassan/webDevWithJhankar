@@ -36,21 +36,28 @@ login.addEventListener('click', function () {
             const depositMoney = document.getElementById('deposit_money').value;
             const convertDepositMoney = parseFloat(depositMoney);
 
-            const previousDeposit = document.getElementById('previous_deposit').innerText;
-            const convertPreviousDeposit = parseFloat(previousDeposit);
-            const total = convertPreviousDeposit + convertDepositMoney;
-            document.getElementById('previous_deposit').innerText = total;
+            // const previousDeposit = document.getElementById('previous_deposit').innerText;
+            // const convertPreviousDeposit = parseFloat(previousDeposit);
+            // const total = convertPreviousDeposit + convertDepositMoney;
+            // document.getElementById('previous_deposit').innerText = total;
+            updateSpanText('previous_deposit', convertDepositMoney);
+            updateSpanText('previous_balance', convertDepositMoney);
+            // const mainBalance = document.getElementById('previous_balance').innerText;
+            // const convertedMainBalance = parseFloat(mainBalance);
+            // const currentMainBalance = convertedMainBalance + convertDepositMoney;
+            // document.getElementById('previous_balance').innerText = currentMainBalance;
 
             document.getElementById('deposit_money').value = '';
-            const mainBalance = document.getElementById('previous_balance').innerText;
-            const convertedMainBalance = parseFloat(mainBalance);
-            const currentMainBalance = convertedMainBalance + convertDepositMoney;
-            document.getElementById('previous_balance').innerText = currentMainBalance;
         }
 
-
-
     })
+    function updateSpanText(id, convertDepositMoney) {
+        const previousDeposit = document.getElementById(id).innerText;
+        const convertPreviousDeposit = parseFloat(previousDeposit);
+        const total = convertPreviousDeposit + convertDepositMoney;
+        document.getElementById(id).innerText = total;
+    }
+
     // withdraw area
     const withDrawBtn = document.getElementById('withdrawBtn');
     withDrawBtn.addEventListener('click', function () {
@@ -66,7 +73,7 @@ login.addEventListener('click', function () {
         const withdrawMainBalance = convertedMainBalance - convertWithdrawInput;
         document.getElementById('previous_balance').innerText = withdrawMainBalance;
     })
-
+    //like deposit area... can be used function here too ...if time then try it to avoid repetition
 });
 
 
